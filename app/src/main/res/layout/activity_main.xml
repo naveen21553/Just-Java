@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/NameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_text_name"
+        android:inputType="text"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ToppingsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/NameEditText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/toppings_text"/>
+
+    <CheckBox
+        android:id="@+id/WhippedCreamCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ToppingsTextView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/whipped_text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/WhippedCreamCheckBox"
+        app:layout_constraintLeft_toRightOf="@id/WhippedCreamCheckBox"
+        android:layout_marginStart="16dp"/>
+
+    <CheckBox
+        android:id="@+id/ChocolateCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/WhippedCreamCheckBox"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chocolate_text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ChocolateCheckBox"
+        app:layout_constraintLeft_toRightOf="@id/ChocolateCheckBox"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:id="@+id/QuantityTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ChocolateCheckBox"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/quantity_text"/>
+
+    <Button
+        android:id="@+id/MinusButton"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/minus_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:onClick="MinusButton_Click"
+        app:layout_constraintTop_toBottomOf="@id/QuantityTextView" />
+
+    <TextView
+        android:id="@+id/CountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@id/MinusButton"
+        app:layout_constraintLeft_toRightOf="@id/MinusButton"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/count_default_text"/>
+
+    <Button
+        android:id="@+id/PlusButton"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/MinusButton"
+        android:layout_marginStart="8dp"
+        android:text="@string/plus_text"
+        android:onClick="PlusButton_Click"
+        app:layout_constraintLeft_toRightOf="@id/CountText"/>
+
+    <Button
+        android:id="@+id/OrderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/MinusButton"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/order_text"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
